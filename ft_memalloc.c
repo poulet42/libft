@@ -6,7 +6,7 @@
 /*   By: cprune <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 17:07:04 by cprune            #+#    #+#             */
-/*   Updated: 2015/11/26 18:15:14 by cprune           ###   ########.fr       */
+/*   Updated: 2015/12/05 18:08:36 by cprune           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void * ptr;
+	void	*ptr;
 
-	if (!(ptr = malloc(size))) 
+	if (!(ptr = malloc(size)))
 		return (0);
 	ft_bzero(ptr, size);
-	return ptr;
+	return (ptr);
 }
-
-

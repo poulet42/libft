@@ -6,7 +6,7 @@
 /*   By: cprune <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 17:41:11 by cprune            #+#    #+#             */
-/*   Updated: 2015/12/04 10:01:23 by cprune           ###   ########.fr       */
+/*   Updated: 2015/12/05 18:56:50 by cprune           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,14 @@ static int	count_nbr(int nbr)
 
 char		*ft_itoa(int n)
 {
-	int		x;
+	long	x;
 	char	*str;
 	int		neg;
 
 	neg = (n < 0 ? 1 : 0);
-	x = count_nbr(n);
-	if (!(str = ft_strnew(x + neg)))
-		return NULL;
-	if (n == -2147483648)
-		return "-2147483648";
+	x = (long)count_nbr(n);
+	if (!(str = (char *)malloc(sizeof(char) * (x + neg))))
+		return (NULL);
 	str[x + neg] = '\0';
 	if (neg)
 	{
@@ -50,7 +48,7 @@ char		*ft_itoa(int n)
 	}
 	while (x + neg > neg)
 	{
-		str[x  - !neg] = n % 10 + '0';
+		str[x - !neg] = n % 10 + '0';
 		n = n / 10;
 		x--;
 	}

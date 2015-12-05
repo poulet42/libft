@@ -6,13 +6,13 @@
 /*   By: cprune <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 17:56:39 by cprune            #+#    #+#             */
-/*   Updated: 2015/11/28 18:25:24 by cprune           ###   ########.fr       */
+/*   Updated: 2015/12/05 18:20:39 by cprune           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
@@ -20,5 +20,5 @@ char *ft_strchr(const char *s, int c)
 			return (char *)s;
 		s++;
 	}
-	return (c == 0 ? (char *)s : NULL); 
+	return (c == 0 ? (char *)s : NULL);
 }

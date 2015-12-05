@@ -6,7 +6,7 @@
 /*   By: cprune <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:23:25 by cprune            #+#    #+#             */
-/*   Updated: 2015/11/28 18:08:18 by cprune           ###   ########.fr       */
+/*   Updated: 2015/12/05 18:09:46 by cprune           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (n--)
 	{
 		if (*ptr == (unsigned char)c)
-			return ptr;
+			return (ptr);
 		ptr++;
 	}
-	return NULL;
+	return (NULL);
 }
