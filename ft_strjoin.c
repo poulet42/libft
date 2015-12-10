@@ -6,7 +6,7 @@
 /*   By: cprune <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 11:39:36 by cprune            #+#    #+#             */
-/*   Updated: 2015/12/06 10:29:06 by cprune           ###   ########.fr       */
+/*   Updated: 2015/12/10 19:12:29 by cprune           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
-	int		s1len;
-	int		s2len;
 	int		i;
 
 	i = 0;
