@@ -6,14 +6,14 @@
 /*   By: cprune <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 17:41:11 by cprune            #+#    #+#             */
-/*   Updated: 2015/12/10 19:13:00 by cprune           ###   ########.fr       */
+/*   Updated: 2015/12/11 14:10:24 by cprune           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static int	count_nbr(int nbr)
+/*static int	count_nbr(int nbr)
 {
 	int i;
 
@@ -26,7 +26,7 @@ static int	count_nbr(int nbr)
 		i++;
 	}
 	return (i);
-}
+}*/
 
 char		*ft_itoa(int n)
 {
@@ -35,7 +35,7 @@ char		*ft_itoa(int n)
 	int		neg;
 
 	neg = (n < 0 ? 1 : 0);
-	x = count_nbr(n);
+	x = ft_count_nbr(n);
 	if (!(str = (char *)malloc(sizeof(char) * (x + neg + 1))))
 		return (NULL);
 	str += neg + x;

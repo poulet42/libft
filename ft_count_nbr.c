@@ -6,13 +6,13 @@
 /*   By: cprune <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/10 17:43:52 by cprune            #+#    #+#             */
-/*   Updated: 2015/12/10 17:44:31 by cprune           ###   ########.fr       */
+/*   Updated: 2015/12/11 14:10:35 by cprune           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_nbr(int nbr)
+int	ft_count_nbr(int nbr)
 {
 	int temp;
 	int i;
