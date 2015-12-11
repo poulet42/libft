@@ -6,7 +6,7 @@
 #    By: cprune <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 14:35:58 by cprune            #+#    #+#              #
-#    Updated: 2015/12/10 19:11:47 by cprune           ###   ########.fr        #
+#    Updated: 2015/12/11 14:29:29 by cprune           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ HEADERS = libft.h
 
 RM = rm -f *.o
 
-SRC = ft_isspace.c \
+SRC = ft_count_nbr.c \
+ft_isspace.c \
 ft_bzero.c \
 ft_memalloc.c \
 ft_memccpy.c \

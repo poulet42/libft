@@ -6,7 +6,7 @@
 /*   By: cprune <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:26:54 by cprune            #+#    #+#             */
-/*   Updated: 2015/12/10 18:18:59 by cprune           ###   ########.fr       */
+/*   Updated: 2015/12/11 14:28:58 by cprune           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ typedef struct		s_list
 
 }					t_list;
 
+int					ft_count_nbr(int nbr);
 void				ft_putchar(char c);
 size_t				ft_strlen(const char *s);
 void				ft_putstr(char const *s);
@@ -84,6 +85,5 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_isspace(int c);
 int					ft_isupper(int c);
 int					ft_islower(int c);
-int					ft_count_nbr(int nbr);
 
 #endif
