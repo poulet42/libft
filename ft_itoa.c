@@ -6,27 +6,12 @@
 /*   By: cprune <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 17:41:11 by cprune            #+#    #+#             */
-/*   Updated: 2015/12/11 14:10:24 by cprune           ###   ########.fr       */
+/*   Updated: 2015/12/14 11:32:23 by cprune           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-
-/*static int	count_nbr(int nbr)
-{
-	int i;
-
-	i = 0;
-	if (nbr == 0)
-		return (1);
-	while (nbr != 0)
-	{
-		nbr = nbr / 10;
-		i++;
-	}
-	return (i);
-}*/
 
 char		*ft_itoa(int n)
 {

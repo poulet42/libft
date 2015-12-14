@@ -6,11 +6,13 @@
 /*   By: cprune <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 11:40:53 by cprune            #+#    #+#             */
-/*   Updated: 2015/12/06 10:13:32 by cprune           ###   ########.fr       */
+/*   Updated: 2015/12/14 14:00:18 by cprune           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 static int	ft_istrimspace(int c)
 {
@@ -19,28 +21,26 @@ static int	ft_istrimspace(int c)
 
 char		*ft_strtrim(char const *s)
 {
-	int		i;
-	int		y;
-	int		j;
-	int		n;
-	char	*str;
+	int len;
+	int cmpe;
+	char *str;
 
-	j = 0;
-	i = 0;
-	y = 1;
-	if (s == NULL)
+	cmpe = 0;
+	while (ft_istrimspace(*s))
+		s++;
+	if (*s == '\0')
+		return ("");
+	len = strlen(s);
+	s = s + len;
+	while (ft_istrimspace(*--s))
+		cmpe++;
+	if(!(str = (char *)malloc(sizeof(char) * (len - cmpe + 1))))
 		return (NULL);
-	n = ft_strlen(s);
-	while (ft_istrimspace(s[i]) && s[i])
-		i++;
-	if (i == n)
-		return (str = "");
-	while (ft_istrimspace(s[n - y]) && y < n)
-		y++;
-	if (!(str = ft_strnew(sizeof(char) * (n - (--i + --y)))))
-		return (NULL);
-	while (++i < n - y)
-		str[j++] = s[i];
-	str[j] = '\0';
+	str[len - cmpe] = '\0';
+	while (len - cmpe - 1 >= 0)
+	{
+		str[len - cmpe - 1] = *s--;
+		len--;
+	}
 	return (str);
 }
